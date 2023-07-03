@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM 1
+    </title>
+</head>
+<body>
+<form action="/action_page.php" method="get">
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td>
+                <input type="text" name="input_name" style="width: 150px;">
+            </td>
+        </tr>
+            <td>Email: </td>
+            <td>
+                <input type="text" name="input_email" style="width: 150px;">
+            </td>
+        <tr>
+
+        </tr>
+    </table>
+<p>
+    <input type="checkbox" name="check_subscribe">
+    Subscribe to the News Latter</p>
+<p>Format of the Email:</p>
+<table>
+    <tr>
+        <td><input type="radio" name="check_format_Email" value="1"></td>
+        <td>HTML</td>
+    </tr>
+    <tr>
+        <td><input type="radio" name="check_format_Email" value="2"></td>
+        <td>Plain Text</td>
+    </tr>
+</table>
+<p>Type of subscription you want:</p>
+<select name="Select_Type" id="Select_Type" style="width: 150px;">
+    <option value="Standard">Standard</option>
+    <option value="Free">Free</option>
+</select>
+<p>Comments to the Editor:</p>
+<textarea name="text_area_input" id="text_area_input" cols="28" rows="10" style="border-radius: 5px;"></textarea><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
