@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM 2</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div style="border: 2px solid; border-color: blue; width: 300px; padding: 10px; border-radius: 8px;">
+        <form action="/action_page.php" method="get">
+            <p style="color: blue; font-weight: bold;">Please complete our survey</p>
+            <p style="font-weight: bold;">Contact information</p>
+            <table>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">Email address:</td>
+                    <td><input type="text" name="input_email_address" width="200px"></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold; ">First name:</td>
+                    <td><input type="text" name="input_first_name" width="200px"></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">Last name:</td>
+                    <td><input  type="text" name="input_last_name" width="200px"></td>
+                </tr>
+            </table>
+            <p style="font-weight: bold;">Geographic information</p>
+            <table>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">State:</td>
+                    <td><input type="text" placeholder="Two characters" name="input_State" width="200px"></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold; ">Zip code:</td>
+                    <td><input type="text" placeholder="Five digits" name="input_Zip_code" width="200px"></td>
+                </tr>
+            </table>
+            <p style="font-weight: bold;">How did you hear about us?</p>
+            <table>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">Web Search:</td>
+                    <td> <input type="checkbox" name="check_hear"></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">Facebook:</td>
+                    <td> <input type="checkbox" name="check_hear"></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">Twitter:</td>
+                    <td> <input type="checkbox" name="check_hear"></td>
+                </tr>
+                <tr>
+                    <td style="width: 150px; color: blue; font-weight: bold;">Email message:</td>
+                    <td> <input type="checkbox" name="check_hear"></td>
+                </tr>
+            </table>
+            <p style="font-weight: bold;">Thank you for taking our surver!</p>
+            <table>
+                <tr>
+                    <td style="width: 130px; text-align: center;">
+                        <input type="submit" value="Submit"></td>
+                    </td>
+                    <td style="width: 130px; text-align: center;">
+                        <input type="reset" name="reset" id="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
