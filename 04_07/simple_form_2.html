@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .part_body{
+            width: 300px;
+            background-color: yellow;
+        }
+        h1{
+            color: blue;
+            font-size: 15px;
+            text-align: left;
+            background-color: aquamarine;
+        }
+        .class_btn tr td{
+            width: 110px;
+            margin: 20px;
+        }
+        .content{
+            color: blue;
+            width: 100px;
+            text-align: left;
+        }
+        tr{
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="part_body">
+        <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+        <form action="/action.php" method="get">
+        <table class="class_form">
+            <tr>
+                <td class="content">Họ và tên</td>
+                <td colspan="2"><input type="text" name="input_name"></td>
+            </tr>
+            <tr>
+                <td class="content">Ngày sinh</td>
+                <td colspan="2"><input type="date" name="input_birthday"></td>
+            </tr>
+            <tr>
+                <td class="content">Giới tính</td>
+                <td><input type="radio" name="input_gender"><label for="input_gender">Nam</label></td>
+                <td><input type="radio" name="input_gender"><label for="input_gender">Nữ</label></td>
+            </tr>
+            <tr>
+                <td class="content">Địa chỉ</td>
+                <td colspan="2"><textarea name="input_address" id="input_address" cols="20" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td class="content">Lớp</td>
+                <td colspan="2">
+                    <select name="class_select" id="class_select_id" style="width: 100px;text-align: center;">
+                    <option value="a1">--Chọn lớp--</option>
+                    <option value="a1">12A1</option>
+                    <option value="a2">12A2</option>
+                    <option value="a3">12A3</option>
+                    <option value="a4">12A4</option>
+                    </select>
+            </td>
+            </tr>
+            <tr>
+                <td class="content">Email</td>
+                <td colspan="2"><input type="email"></td>
+            </tr>
+            <tr>
+                <td class="content">Điện thoại</td>
+                <td colspan="2"><input type="number"></td>
+            </tr>
+        </table>
+        <table class="class_btn">
+            <tr>
+                <td></td>
+                <td><button type="submit" name="btn_Submit">Đăng ký</button></td>
+                <td><button type="reset" name="btn_Reset">Nhập lại</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>
