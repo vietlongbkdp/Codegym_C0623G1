@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi tiền</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div>
+        <h1>Đổi tiền tại đây</h1>
+        <label for="input_tien">Nhập số tiền    </label><input id="input__tien" type="number" name="input_tien">
+        <label for="input_tigia">Nhập tỉ giá    </label><input id="input__tigia" type="tigia" name="input_tigia">
+
+        <label for="change"></label><select name="input_change" id="change_id" style="margin: 50px;">
+            <option value="1">VND sang USD</option>
+            <option value="2">USD sang VND</option>
+        </select>
+        <button type="button" name="btn_result" id="btn_result_id" onclick="Tuong();">Chuyển đổi</button>
+        <ul id="result">
+
+        </ul>
+    </div>
+
+
+
+    <script>
+        function Tuong(){
+            var D = document.getElementById("change_id").value;
+            S = 0;
+            var X;
+            if ( D == 1) {
+                X = " USD";
+                var S = (+ document.getElementById("input__tien").value)/(+document.getElementById("input__tigia").value);
+                document.getElementById("result").innerHTML = "<li>Kết quả chuyển đổi là: "+ S + X +"</li>";
+            } else {
+                X = " VND";
+                var S = (+ document.getElementById("input__tien").value)*(+document.getElementById("input__tigia").value);
+                document.getElementById("result").innerHTML = "<li>Kết quả chuyển đổi là: "+ S + X +"</li>";
+                }
+            
+        }
+    </script>
+</body>
+</html>
