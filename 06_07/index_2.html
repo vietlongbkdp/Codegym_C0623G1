@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Address:<br>
+<textarea id="myTextarea">aa</textarea>
+
+<p>Click the button to change the contents of the text area.</p>
+
+<button type="button" onclick ="myFunction()">Try it</button>
+<button type="button" onclick ="xoa()">Clear</button>
+
+<script>
+function xoa() {
+  document.getElementById("myTextarea").value = "";
+  }
+function myFunction() {
+    var chuoi = document.getElementById("myTexrarea").value;
+    chuoi = chuoi + document.getElementById("myTexrarea").value;
+  document.getElementById("myTextarea").value = chuoi;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <h1>Chuyển đổi nhiệt độ</h1>   
+    <label for="input_doC">Nhập nhiệt độ: </label><input type="number" name="input_doC" id="id_doC" style="width: 50px ,padding: 20px;"><label for="input_doC"> độ C</label>
+    <button type="button" id="btn_convert" onclick="convert_1();">Chuyển đổi</button>
+    <ul id="result">
+
+    </ul>
+
+    <script>
+        function convert_1(){
+            var a = ((document.getElementById("id_doC").value) *(9/5))+32;
+            document.getElementById("result").innerHTML = "<li> Kết quả là : " + a + " độ F</li>";
+        }
+
+    </script>
+</body>
+</html>

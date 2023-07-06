@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm trung bình</title>
+</head>
+<body>
+    <h1>Tính điểm trung bình</h1>
+    <label for="input_toan">Điểm Toán</label><input type="number" name="input_toan" id="id_toan" style="width: 220px ,padding: 20px;"><br><br>
+    <label for="input_hoa">Điểm Hoá</label><input type="number" name="input_hoa" id="id_hoa" style="width: 220px, padding: 20px;"><br><br>
+    <label for="input_sinh">Điểm Sinh</label><input type="number" name="input_sinh" id="id_sinh" style="width: 220px, padding: 20px;"><br><br>
+    <button type="button" id="tinhDiemTrungBinh" onclick="diemTrungBinh()";>Tính điểm trung bình</button>
+    <button type="button" id="tinhDiemTong" onclick="diemTong()";>Tính điểm tổng</button>
+    <ul id="result">
+
+    </ul>
+    <script>
+        function diemTrungBinh(){
+            var a = (+document.getElementById("id_toan").value) + (+document.getElementById("id_hoa").value) + (+document.getElementById("id_sinh").value);
+            document.getElementById("result").innerHTML = "<li> Điểm trung bình 3 môn là: " + (a/3) + "</li>";
+        }
+        function diemTong(){
+            var a = (+document.getElementById("id_toan").value) + (+document.getElementById("id_hoa").value) + (+document.getElementById("id_sinh").value);
+            document.getElementById("result").innerHTML = "<li> Điểm tổng 3 môn là: " + (a) + "</li>";
+        }
+
+    </script>
+</body>
+</html>
