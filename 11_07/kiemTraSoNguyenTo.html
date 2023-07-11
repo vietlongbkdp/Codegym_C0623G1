@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số Nguyên Tố</title>
+</head>
+<body>
+    <h1>Số nguyên tố</h1>
+    <label for="snt">Nhập số lượng số nguyên tố cần hiển thị:  </label> <input type="number" name="input_n" id="inputN" style="width: 50px;">
+    <button type="button" id="btnResult" onclick="resultSNT()">Kết quả</button>
+    <ul id="showResult">
+
+    </ul>
+
+
+    <script>
+        function sNT(a){
+            var a;
+            var cout = 0;
+            if(a == 2 || a == 3){
+            return true;
+        } else { 
+            for(i = 2; i < a; i++)
+            {
+                if ((a % i) == 0){
+                    cout +=1;
+                }
+            }
+            if(cout == 0){
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        }
+        }
+        // function resultSNT(){
+        //     var inpSNT = +document.getElementById('inputN').value;
+        //     // var count_2 = 0; 
+        //         for(i = 2; i < inpSNT; i++){
+        //                 if(sNT(i) == true){
+        //             console.log(i);
+        //             // count_2 ++;
+                
+        //             // document.getElementById("showResult").innerHTML = "<li>" + i + "</li>";
+        //         }
+        //         // if (cout_2 >inpSNT){
+        //         //     break;
+        //         // }
+        //     }
+        // }
+        //     // while(count_2 < inpSNT)
+        //     // {   
+        //     //     if(sNT(i)){
+        //     //         console.log(i);
+        //     //         i ++;
+
+        //     //     }
+        //     //     count_2 ++;
+        //     // }
+            function resultSNT(){
+            var inpSNT = +document.getElementById('inputN').value;
+            var dem = 0;
+            var numTemp = 2;
+            while(dem <= inpSNT){
+                for(i = 2; i < numTemp; i++)
+                {
+                    if(sNT(i)){
+                        console.log(i);
+                        dem++;
+                        break;
+                    }
+                }
+            }   numTemp +=1;
+        }
+    </script>
+</body>
+</html>

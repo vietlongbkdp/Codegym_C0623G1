@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cửu chương</title>
+</head>
+<table border-col>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+</table>
+<body>
+    <h1>Bảng cửu chương</h1>
+    <script>
+        var i = 1;
+        var j = 2;
+        
+        cal = '<table border="1" style="background-color: gray; border-collapse: collapse;">';
+        for (i = 1; i < 10; i++) {
+            cal = cal + "<tr>";
+            for (j = 2; j < 10; j++){
+                cal = cal + '<td style="width: 100px; text-align: left; height: 25px; padding-left: 5px;">' + j + " x " + i + " = " +i*j + '</td>';
+            } 
+            }
+            document.write(cal);
+    </script>
+</body>
+
+</html>
