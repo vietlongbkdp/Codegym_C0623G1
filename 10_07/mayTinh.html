@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính</title>
+    <style>
+        td{
+            background-color: blueviolet;
+            width: 34px;
+            height: 34px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+<body>
+        <h1 style="font-size: 20px;">Máy tính siêu cấp Vip Pro</h1>
+        <input type="text" id="input_screen" width="300px" style="margin-bottom: 15px;">
+        <br>        <table>
+            <tr>
+                <td onclick="get_value('1');">1</td>
+                <td onclick="get_value('2');">2</td>
+                <td onclick="get_value('3');">3</td>
+                <td onclick="get_value('+');">+</td>
+            </tr>
+            <tr>
+                <td onclick="get_value('4');">4</td>
+                <td onclick="get_value('5');">5</td>
+                <td onclick="get_value('6');">6</td>
+                <td onclick="get_value('-');">-</td>
+            </tr>
+            <tr>
+                <td onclick="get_value('7');">7</td>
+                <td onclick="get_value('8');">8</td>
+                <td onclick="get_value('9');">9</td>
+                <td onclick="get_value('*');">x</td>
+            </tr>
+            <tr>
+                <td onclick="get_value('C');">C</td>
+                <td onclick="get_value('0');">0</td>
+                <td onclick="getResult();">=</td>
+                <td onclick="get_value('/');">:</td>
+            </tr>
+        </table>
+
+
+        <script>
+            function get_value('a'){
+                var a;
+                var str_input = document.getElementById("input_screen").innerText;
+                str_input += a;
+            }
+            function getResult(){
+
+                document.getElementById("input_screen").innerText = eval(str_input);
+            }
+
+        </script>
+</body>
+</html>

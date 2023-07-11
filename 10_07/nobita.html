@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobita</title>
+</head>
+<body onload="docReady()">
+    <img id="myImage" style="width: 200px; position: relative; left: 0px; top: 0px" src="https://pngfre.com/wp-content/uploads/novita-18-726x1024.png" alt="Ảnh Nobita">
+    <br>
+    <button type="button" id="moveLeft" style="margin: 30px;" onclick="move_Left();">Move Left</button>
+    <button type="button" id="moveRight" style="margin: 30px;" onclick="move_Right();">Move Right</button>
+    <button type="button" id="moveTop" style="margin: 30px;" onclick="move_Top();">Move Top</button>
+    <button type="button" id="moveBottom" style="margin: 30px;" onclick="move_Bottom();">Move Bottom</button>
+
+    <script>
+
+    function move_Left()
+           { var a = document.getElementById("myImage");
+            // console.log(a);
+            a.style.left = parseInt(a.style.left) - 20 +"px";}
+        
+    function move_Right()
+           { var a = document.getElementById("myImage");
+            a.style.left = parseInt(a.style.left) + 20 +"px";
+        }
+    function move_Top()
+           { var a = document.getElementById("myImage");
+            a.style.top = parseInt(a.style.top) - 20 +"px";
+        }
+    function move_Bottom()
+           { var a = document.getElementById("myImage");
+            a.style.top = parseInt(a.style.top) + 20 +"px";
+        }
+
+    function pressKey(event){
+        switch (event.keyCode) {
+            case 39:
+                move_Right();
+                break;
+            case 37:
+                move_Left();
+                break;
+            case 38:
+                move_Top();
+                break;
+            case 40:
+                move_Bottom();
+                break;
+            default:
+                break;
+        }
+    }
+    function docReady(){
+        window.addEventListener("keydown", pressKey)
+    }
+    </script>
+</body>
+</html>

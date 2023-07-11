@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var cCao = +prompt("Nhập chiều cao: ");
+        var cNang = +prompt("Nhập cân nặng: ");
+        var bmi = cNang / (cCao*cCao);
+        if (bmi < 18.5) {
+            alert("Bạn bị còi, chỉ số BMI là: " + bmi);
+        }else
+        {
+            if(bmi < 25)
+            {
+                alert("Sức khoẻ bình thường, chỉ số BMI là: " +bmi);
+            }else
+            { if(bmi < 30)
+                alert("Bạn đang thừa cân, chỉ số BMI là: " +bmi);
+            
+            else
+            {
+                alert("Bạn đang béo phì, chỉ số BMI là: " +bmi);
+            }
+        }}
+    </script>
+</body>
+</html>

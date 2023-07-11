@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="show"></p>
+
+    <script>
+        var stra = prompt("Nhập tên của bạn");
+        if (stra == "Admin") {
+            var strPasswords = prompt("Nhập mật khẩu Admin: ")
+            if (strPasswords == "TheMaster") {
+                document.getElementById("show").innerText = "Xin chào Admin";
+            }
+            else {
+                if (strPasswords == "") 
+                    document.getElementById("show").innerText = "Canceled";
+                else 
+                    document.getElementById("show").innerText = "Wrong password";
+                };}
+        else {
+            if (stra == "")
+            {
+                alert("Canceled");
+            }
+            else
+            {   
+                alert("Tôi không biết bạn là ai, bạn đi ra đi")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
