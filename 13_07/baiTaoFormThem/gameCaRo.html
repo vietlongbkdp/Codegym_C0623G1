@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Caro</title>
+    <style>
+
+        td{
+            width: 30px;
+            height: 30px;
+            background: grey;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Caro Game Simple</h1>
+    <table >
+        <tr>
+            <td id="id_1_1" onclick="clickButton1_1()"></td>
+            <td id="id_1_2" onclick="clickButton1_2()"></td>
+            <td id="id_1_3" onclick="clickButton1_3()"></td>
+            <td id="id_1_4" onclick="clickButton1_4()"></td>
+            <td id="id_1_5" onclick="clickButton1_5()"></td>
+            <td id="id_1_6" onclick="clickButton1_6()"></td>
+            <td id="id_1_7" onclick="clickButton1_7()"></td>
+            <td id="id_1_8" onclick="clickButton1_8()"></td>
+            <td id="id_1_9" onclick="clickButton1_9()"></td>
+            <td id="id_1_10" onclick="clickButton1_10()"></td>
+            <td id="id_1_11" onclick="clickButton1_11()"></td>
+            <td id="id_1_12" onclick="clickButton1_12()"></td>
+
+    </tr>
+        <tr>
+            <td id="id_2_1" onclick="clickButton2_1()"></td>
+            <td id="id_2_2" onclick="clickButton2_2()"></td>
+            <td id="id_2_3" onclick="clickButton2_3()"></td>
+            <td id="id_2_4" onclick="clickButton2_4()"></td>
+            <td id="id_2_5" onclick="clickButton2_5()"></td>
+            <td id="id_2_6" onclick="clickButton2_6()"></td>
+            <td id="id_2_7" onclick="clickButton2_7()"></td>
+            <td id="id_2_8" onclick="clickButton2_8()"></td>
+            <td id="id_2_9" onclick="clickButton2_9()"></td>
+            <td id="id_2_10" onclick="clickButton2_10()"></td>
+            <td id="id_2_11" onclick="clickButton2_11()"></td>
+            <td id="id_2_12" onclick="clickButton2_12()"></td>
+    </tr>
+        <tr>
+            <td id="id_3_1" onclick="clickButton3_1()"></td>
+            <td id="id_3_2" onclick="clickButton3_2()"></td>
+            <td id="id_3_3" onclick="clickButton3_3()"></td>
+            <td id="id_3_4" onclick="clickButton3_4()"></td>
+            <td id="id_3_5" onclick="clickButton3_5()"></td>
+            <td id="id_3_6" onclick="clickButton3_6()"></td>
+            <td id="id_3_7" onclick="clickButton3_7()"></td>
+            <td id="id_3_8" onclick="clickButton3_8()"></td>
+            <td id="id_3_9" onclick="clickButton3_9()"></td>
+            <td id="id_3_10" onclick="clickButton3_10()"></td>
+            <td id="id_3_11" onclick="clickButton3_11()"></td>
+            <td id="id_3_12" onclick="clickButton3_12()"></td>
+    </tr>
+    <tr>
+        <td id="id_4_1" onclick="clickButton4_1()"></td>
+        <td id="id_4_2" onclick="clickButton4_2()"></td>
+        <td id="id_4_3" onclick="clickButton4_3()"></td>
+        <td id="id_4_4" onclick="clickButton4_4()"></td>
+        <td id="id_4_5" onclick="clickButton4_5()"></td>
+        <td id="id_4_6" onclick="clickButton4_6()"></td>
+        <td id="id_4_7" onclick="clickButton4_7()"></td>
+        <td id="id_4_8" onclick="clickButton4_8()"></td>
+        <td id="id_4_9" onclick="clickButton4_9()"></td>
+        <td id="id_4_10" onclick="clickButton4_10()"></td>
+        <td id="id_4_11" onclick="clickButton4_11()"></td>
+        <td id="id_4_12" onclick="clickButton4_12()"></td>
+</tr>
+<tr>
+    <td id="id_5_1" onclick="clickButton5_1()"></td>
+    <td id="id_5_2" onclick="clickButton5_2()"></td>
+    <td id="id_5_3" onclick="clickButton5_3()"></td>
+    <td id="id_5_4" onclick="clickButton5_4()"></td>
+    <td id="id_5_5" onclick="clickButton5_5()"></td>
+    <td id="id_5_6" onclick="clickButton5_6()"></td>
+    <td id="id_5_7" onclick="clickButton5_7()"></td>
+    <td id="id_5_8" onclick="clickButton5_8()"></td>
+    <td id="id_5_9" onclick="clickButton5_9()"></td>
+    <td id="id_5_10" onclick="clickButton5_10()"></td>
+    <td id="id_5_11" onclick="clickButton5_11()"></td>
+    <td id="id_5_12" onclick="clickButton5_12()"></td>
+</tr>
+<tr>
+    <td id="id_6_1" onclick="clickButton6_1()"></td>
+    <td id="id_6_2" onclick="clickButton6_2()"></td>
+    <td id="id_6_3" onclick="clickButton6_3()"></td>
+    <td id="id_6_4" onclick="clickButton6_4()"></td>
+    <td id="id_6_5" onclick="clickButton6_5()"></td>
+    <td id="id_6_6" onclick="clickButton6_6()"></td>
+    <td id="id_6_7" onclick="clickButton6_7()"></td>
+    <td id="id_6_8" onclick="clickButton6_8()"></td>
+    <td id="id_6_9" onclick="clickButton6_9()"></td>
+    <td id="id_6_10" onclick="clickButton6_10()"></td>
+    <td id="id_6_11" onclick="clickButton6_11()"></td>
+    <td id="id_6_12" onclick="clickButton6_12()"></td>
+</tr>
+<tr>
+    <td id="id_7_1" onclick="clickButton7_1()"></td>
+    <td id="id_7_2" onclick="clickButton7_2()"></td>
+    <td id="id_7_3" onclick="clickButton7_3()"></td>
+    <td id="id_7_4" onclick="clickButton7_4()"></td>
+    <td id="id_7_5" onclick="clickButton7_5()"></td>
+    <td id="id_7_6" onclick="clickButton7_6()"></td>
+    <td id="id_7_7" onclick="clickButton7_7()"></td>
+    <td id="id_7_8" onclick="clickButton7_8()"></td>
+    <td id="id_7_9" onclick="clickButton7_9()"></td>
+    <td id="id_7_10" onclick="clickButton7_10()"></td>
+    <td id="id_7_11" onclick="clickButton7_11()"></td>
+    <td id="id_7_12" onclick="clickButton7_12()"></td>
+</tr>
+<tr>
+    <td id="id_8_1" onclick="clickButton8_1()"></td>
+    <td id="id_8_2" onclick="clickButton8_2()"></td>
+    <td id="id_8_3" onclick="clickButton8_3()"></td>
+    <td id="id_8_4" onclick="clickButton8_4()"></td>
+    <td id="id_8_5" onclick="clickButton8_5()"></td>
+    <td id="id_8_6" onclick="clickButton8_6()"></td>
+    <td id="id_8_7" onclick="clickButton8_7()"></td>
+    <td id="id_8_8" onclick="clickButton8_8()"></td>
+    <td id="id_8_9" onclick="clickButton8_9()"></td>
+    <td id="id_8_10" onclick="clickButton8_10()"></td>
+    <td id="id_8_11" onclick="clickButton8_11()"></td>
+    <td id="id_8_12" onclick="clickButton8_12()"></td>
+</tr>
+<tr>
+    <td id="id_9_1" onclick="clickButton9_1()"></td>
+    <td id="id_9_2" onclick="clickButton9_2()"></td>
+    <td id="id_9_3" onclick="clickButton9_3()"></td>
+    <td id="id_9_4" onclick="clickButton9_4()"></td>
+    <td id="id_9_5" onclick="clickButton9_5()"></td>
+    <td id="id_9_6" onclick="clickButton9_6()"></td>
+    <td id="id_9_7" onclick="clickButton9_7()"></td>
+    <td id="id_9_8" onclick="clickButton9_8()"></td>
+    <td id="id_9_9" onclick="clickButton9_9()"></td>
+    <td id="id_9_10" onclick="clickButton9_10()"></td>
+    <td id="id_9_11" onclick="clickButton9_11()"></td>
+    <td id="id_9_12" onclick="clickButton9_12()"></td>
+</tr>
+<tr>
+    <td id="id_10_1" onclick="clickButton10_1()"></td>
+    <td id="id_10_2" onclick="clickButton10_2()"></td>
+    <td id="id_10_3" onclick="clickButton10_3()"></td>
+    <td id="id_10_4" onclick="clickButton10_4()"></td>
+    <td id="id_10_5" onclick="clickButton10_5()"></td>
+    <td id="id_10_6" onclick="clickButton10_6()"></td>
+    <td id="id_10_7" onclick="clickButton10_7()"></td>
+    <td id="id_10_8" onclick="clickButton10_8()"></td>
+    <td id="id_10_9" onclick="clickButton10_9()"></td>
+    <td id="id_10_10" onclick="clickButton10_10()"></td>
+    <td id="id_10_11" onclick="clickButton10_11()"></td>
+    <td id="id_10_12" onclick="clickButton10_12()"></td>
+</tr>
+<tr>
+    <td id="id_11_1" onclick="clickButton11_1()"></td>
+    <td id="id_11_2" onclick="clickButton11_2()"></td>
+    <td id="id_11_3" onclick="clickButton11_3()"></td>
+    <td id="id_11_4" onclick="clickButton11_4()"></td>
+    <td id="id_11_5" onclick="clickButton11_5()"></td>
+    <td id="id_11_6" onclick="clickButton11_6()"></td>
+    <td id="id_11_7" onclick="clickButton11_7()"></td>
+    <td id="id_11_8" onclick="clickButton11_8()"></td>
+    <td id="id_11_9" onclick="clickButton11_9()"></td>
+    <td id="id_11_10" onclick="clickButton11_10()"></td>
+    <td id="id_11_11" onclick="clickButton11_11()"></td>
+    <td id="id_11_12" onclick="clickButton11_12()"></td>
+</tr>
+<tr>
+    <td id="id_12_1" onclick="clickButton12_1()"></td>
+    <td id="id_12_2" onclick="clickButton12_2()"></td>
+    <td id="id_12_3" onclick="clickButton12_3()"></td>
+    <td id="id_12_4" onclick="clickButton12_4()"></td>
+    <td id="id_12_5" onclick="clickButton12_5()"></td>
+    <td id="id_12_6" onclick="clickButton12_6()"></td>
+    <td id="id_12_7" onclick="clickButton12_7()"></td>
+    <td id="id_12_8" onclick="clickButton12_8()"></td>
+    <td id="id_12_9" onclick="clickButton12_9()"></td>
+    <td id="id_12_10" onclick="clickButton12_10()"></td>
+    <td id="id_12_11" onclick="clickButton12_11()"></td>
+    <td id="id_12_12" onclick="clickButton12_12()"></td>
+</tr>
+
+    </table>
+ <button type="button" id='luotX' style="margin: 20px;" onclick="doiluotX()">Lượt X</button>
+ <button type="button" id="luotO" style="margin: 20px;" onclick="doiluotO()">Lượt O</button>
+
+    <script>
+        var luot = '';
+        function doiluotX(){
+            luot = 'X';
+        }
+        function doiluotO(){
+            luot = 'O';
+        }
+//-----------------------------------------------------------------
+        function clickButton1_1(){
+        document.getElementById('id_1_1').innerText = luot           
+        }
+        function clickButton1_2(){
+        document.getElementById('id_1_2').innerText = luot           
+        }
+        function clickButton1_3(){
+        document.getElementById('id_1_3').innerText = luot           
+        }
+        function clickButton1_4(){
+        document.getElementById('id_1_4').innerText = luot           
+        }
+        function clickButton1_5(){
+        document.getElementById('id_1_5').innerText = luot           
+        }
+        function clickButton1_6(){
+        document.getElementById('id_1_6').innerText = luot           
+        }
+        function clickButton1_7(){
+        document.getElementById('id_1_7').innerText = luot           
+        }
+        function clickButton1_8(){
+        document.getElementById('id_1_8').innerText = luot           
+        }
+        function clickButton1_9(){
+        document.getElementById('id_1_9').innerText = luot           
+        }
+        function clickButton1_10(){
+        document.getElementById('id_1_10').innerText = luot           
+        }
+        function clickButton1_11(){
+        document.getElementById('id_1_11').innerText = luot           
+        }
+        function clickButton1_12(){
+        document.getElementById('id_1_12').innerText = luot           
+        }
+//----------------------------------------------------------------------------------
+        function clickButton2_1(){
+        document.getElementById('id_2_1').innerText = luot           
+        }
+        function clickButton2_2(){
+        document.getElementById('id_2_2').innerText = luot           
+        }
+        function clickButton2_3(){
+        document.getElementById('id_2_3').innerText = luot           
+        }
+        function clickButton2_4(){
+        document.getElementById('id_2_4').innerText = luot           
+        }
+        function clickButton2_5(){
+        document.getElementById('id_2_5').innerText = luot           
+        }
+        function clickButton2_6(){
+        document.getElementById('id_2_6').innerText = luot           
+        }
+        function clickButton2_7(){
+        document.getElementById('id_2_7').innerText = luot           
+        }
+        function clickButton2_8(){
+        document.getElementById('id_2_8').innerText = luot           
+        }
+        function clickButton2_9(){
+        document.getElementById('id_2_9').innerText = luot           
+        }
+        function clickButton2_10(){
+        document.getElementById('id_2_10').innerText = luot           
+        }
+        function clickButton2_11(){
+        document.getElementById('id_2_11').innerText = luot           
+        }
+        function clickButton2_12(){
+        document.getElementById('id_2_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton3_1(){
+        document.getElementById('id_3_1').innerText = luot           
+        }
+        function clickButton3_2(){
+        document.getElementById('id_3_2').innerText = luot           
+        }
+        function clickButton3_3(){
+        document.getElementById('id_3_3').innerText = luot           
+        }
+        function clickButton3_4(){
+        document.getElementById('id_3_4').innerText = luot           
+        }
+        function clickButton3_5(){
+        document.getElementById('id_3_5').innerText = luot           
+        }
+        function clickButton3_6(){
+        document.getElementById('id_3_6').innerText = luot           
+        }
+        function clickButton3_7(){
+        document.getElementById('id_3_7').innerText = luot           
+        }
+        function clickButton3_8(){
+        document.getElementById('id_3_8').innerText = luot           
+        }
+        function clickButton3_9(){
+        document.getElementById('id_3_9').innerText = luot           
+        }
+        function clickButton3_10(){
+        document.getElementById('id_3_10').innerText = luot           
+        }
+        function clickButton3_11(){
+        document.getElementById('id_3_11').innerText = luot           
+        }
+        function clickButton3_12(){
+        document.getElementById('id_3_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton4_1(){
+        document.getElementById('id_4_1').innerText = luot           
+        }
+        function clickButton4_2(){
+        document.getElementById('id_4_2').innerText = luot           
+        }
+        function clickButton4_3(){
+        document.getElementById('id_4_3').innerText = luot           
+        }
+        function clickButton4_4(){
+        document.getElementById('id_4_4').innerText = luot           
+        }
+        function clickButton4_5(){
+        document.getElementById('id_4_5').innerText = luot           
+        }
+        function clickButton4_6(){
+        document.getElementById('id_4_6').innerText = luot           
+        }
+        function clickButton4_7(){
+        document.getElementById('id_4_7').innerText = luot           
+        }
+        function clickButton4_8(){
+        document.getElementById('id_4_8').innerText = luot           
+        }
+        function clickButton4_9(){
+        document.getElementById('id_4_9').innerText = luot           
+        }
+        function clickButton4_10(){
+        document.getElementById('id_4_10').innerText = luot           
+        }
+        function clickButton4_11(){
+        document.getElementById('id_4_11').innerText = luot           
+        }
+        function clickButton4_12(){
+        document.getElementById('id_4_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton5_1(){
+        document.getElementById('id_5_1').innerText = luot           
+        }
+        function clickButton5_2(){
+        document.getElementById('id_5_2').innerText = luot           
+        }
+        function clickButton5_3(){
+        document.getElementById('id_5_3').innerText = luot           
+        }
+        function clickButton5_4(){
+        document.getElementById('id_5_4').innerText = luot           
+        }
+        function clickButton5_5(){
+        document.getElementById('id_5_5').innerText = luot           
+        }
+        function clickButton5_6(){
+        document.getElementById('id_5_6').innerText = luot           
+        }
+        function clickButton5_7(){
+        document.getElementById('id_5_7').innerText = luot           
+        }
+        function clickButton5_8(){
+        document.getElementById('id_5_8').innerText = luot           
+        }
+        function clickButton5_9(){
+        document.getElementById('id_5_9').innerText = luot           
+        }
+        function clickButton5_10(){
+        document.getElementById('id_5_10').innerText = luot           
+        }
+        function clickButton5_11(){
+        document.getElementById('id_5_11').innerText = luot           
+        }
+        function clickButton5_12(){
+        document.getElementById('id_5_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton6_1(){
+        document.getElementById('id_6_1').innerText = luot           
+        }
+        function clickButton6_2(){
+        document.getElementById('id_6_2').innerText = luot           
+        }
+        function clickButton6_3(){
+        document.getElementById('id_6_3').innerText = luot           
+        }
+        function clickButton6_4(){
+        document.getElementById('id_6_4').innerText = luot           
+        }
+        function clickButton6_5(){
+        document.getElementById('id_6_5').innerText = luot           
+        }
+        function clickButton6_6(){
+        document.getElementById('id_6_6').innerText = luot           
+        }
+        function clickButton6_7(){
+        document.getElementById('id_6_7').innerText = luot           
+        }
+        function clickButton6_8(){
+        document.getElementById('id_6_8').innerText = luot           
+        }
+        function clickButton6_9(){
+        document.getElementById('id_6_9').innerText = luot           
+        }
+        function clickButton6_10(){
+        document.getElementById('id_6_10').innerText = luot           
+        }
+        function clickButton6_11(){
+        document.getElementById('id_6_11').innerText = luot           
+        }
+        function clickButton6_12(){
+        document.getElementById('id_6_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton7_1(){
+        document.getElementById('id_7_1').innerText = luot           
+        }
+        function clickButton7_2(){
+        document.getElementById('id_7_2').innerText = luot           
+        }
+        function clickButton7_3(){
+        document.getElementById('id_7_3').innerText = luot           
+        }
+        function clickButton7_4(){
+        document.getElementById('id_7_4').innerText = luot           
+        }
+        function clickButton7_5(){
+        document.getElementById('id_7_5').innerText = luot           
+        }
+        function clickButton7_6(){
+        document.getElementById('id_7_6').innerText = luot           
+        }
+        function clickButton7_7(){
+        document.getElementById('id_7_7').innerText = luot           
+        }
+        function clickButton7_8(){
+        document.getElementById('id_7_8').innerText = luot           
+        }
+        function clickButton7_9(){
+        document.getElementById('id_7_9').innerText = luot           
+        }
+        function clickButton7_10(){
+        document.getElementById('id_7_10').innerText = luot           
+        }
+        function clickButton7_11(){
+        document.getElementById('id_7_11').innerText = luot           
+        }
+        function clickButton7_12(){
+        document.getElementById('id_7_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton8_1(){
+        document.getElementById('id_8_1').innerText = luot           
+        }
+        function clickButton8_2(){
+        document.getElementById('id_8_2').innerText = luot           
+        }
+        function clickButton8_3(){
+        document.getElementById('id_8_3').innerText = luot           
+        }
+        function clickButton8_4(){
+        document.getElementById('id_8_4').innerText = luot           
+        }
+        function clickButton8_5(){
+        document.getElementById('id_8_5').innerText = luot           
+        }
+        function clickButton8_6(){
+        document.getElementById('id_8_6').innerText = luot           
+        }
+        function clickButton8_7(){
+        document.getElementById('id_8_7').innerText = luot           
+        }
+        function clickButton8_8(){
+        document.getElementById('id_8_8').innerText = luot           
+        }
+        function clickButton8_9(){
+        document.getElementById('id_8_9').innerText = luot           
+        }
+        function clickButton8_10(){
+        document.getElementById('id_8_10').innerText = luot           
+        }
+        function clickButton8_11(){
+        document.getElementById('id_8_11').innerText = luot           
+        }
+        function clickButton8_12(){
+        document.getElementById('id_8_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton9_1(){
+        document.getElementById('id_9_1').innerText = luot           
+        }
+        function clickButton9_2(){
+        document.getElementById('id_9_2').innerText = luot           
+        }
+        function clickButton9_3(){
+        document.getElementById('id_9_3').innerText = luot           
+        }
+        function clickButton9_4(){
+        document.getElementById('id_9_4').innerText = luot           
+        }
+        function clickButton9_5(){
+        document.getElementById('id_9_5').innerText = luot           
+        }
+        function clickButton9_6(){
+        document.getElementById('id_9_6').innerText = luot           
+        }
+        function clickButton9_7(){
+        document.getElementById('id_9_7').innerText = luot           
+        }
+        function clickButton9_8(){
+        document.getElementById('id_9_8').innerText = luot           
+        }
+        function clickButton9_9(){
+        document.getElementById('id_9_9').innerText = luot           
+        }
+        function clickButton9_10(){
+        document.getElementById('id_9_10').innerText = luot           
+        }
+        function clickButton9_11(){
+        document.getElementById('id_9_11').innerText = luot           
+        }
+        function clickButton9_12(){
+        document.getElementById('id_9_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+function clickButton10_1(){
+        document.getElementById('id_10_1').innerText = luot           
+        }
+        function clickButton10_2(){
+        document.getElementById('id_10_2').innerText = luot           
+        }
+        function clickButton10_3(){
+        document.getElementById('id_10_3').innerText = luot           
+        }
+        function clickButton10_4(){
+        document.getElementById('id_10_4').innerText = luot           
+        }
+        function clickButton10_5(){
+        document.getElementById('id_10_5').innerText = luot           
+        }
+        function clickButton10_6(){
+        document.getElementById('id_10_6').innerText = luot           
+        }
+        function clickButton10_7(){
+        document.getElementById('id_10_7').innerText = luot           
+        }
+        function clickButton10_8(){
+        document.getElementById('id_10_8').innerText = luot           
+        }
+        function clickButton10_9(){
+        document.getElementById('id_10_9').innerText = luot           
+        }
+        function clickButton10_10(){
+        document.getElementById('id_10_10').innerText = luot           
+        }
+        function clickButton10_11(){
+        document.getElementById('id_10_11').innerText = luot           
+        }
+        function clickButton10_12(){
+        document.getElementById('id_1_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton11_1(){
+        document.getElementById('id_11_1').innerText = luot           
+        }
+        function clickButton11_2(){
+        document.getElementById('id_11_2').innerText = luot           
+        }
+        function clickButton11_3(){
+        document.getElementById('id_11_3').innerText = luot           
+        }
+        function clickButton11_4(){
+        document.getElementById('id_11_4').innerText = luot           
+        }
+        function clickButton11_5(){
+        document.getElementById('id_11_5').innerText = luot           
+        }
+        function clickButton11_6(){
+        document.getElementById('id_11_6').innerText = luot           
+        }
+        function clickButton11_7(){
+        document.getElementById('id_11_7').innerText = luot           
+        }
+        function clickButton11_8(){
+        document.getElementById('id_11_8').innerText = luot           
+        }
+        function clickButton11_9(){
+        document.getElementById('id_11_9').innerText = luot           
+        }
+        function clickButton11_10(){
+        document.getElementById('id_11_10').innerText = luot           
+        }
+        function clickButton11_11(){
+        document.getElementById('id_11_11').innerText = luot           
+        }
+        function clickButton11_12(){
+        document.getElementById('id_11_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+//----------------------------------------------------------------------------------
+        function clickButton12_1(){
+        document.getElementById('id_12_1').innerText = luot           
+        }
+        function clickButton12_2(){
+        document.getElementById('id_12_2').innerText = luot           
+        }
+        function clickButton12_3(){
+        document.getElementById('id_12_3').innerText = luot           
+        }
+        function clickButton12_4(){
+        document.getElementById('id_12_4').innerText = luot           
+        }
+        function clickButton12_5(){
+        document.getElementById('id_12_5').innerText = luot           
+        }
+        function clickButton12_6(){
+        document.getElementById('id_12_6').innerText = luot           
+        }
+        function clickButton12_7(){
+        document.getElementById('id_12_7').innerText = luot           
+        }
+        function clickButton12_8(){
+        document.getElementById('id_12_8').innerText = luot           
+        }
+        function clickButton12_9(){
+        document.getElementById('id_12_9').innerText = luot           
+        }
+        function clickButton12_10(){
+        document.getElementById('id_12_10').innerText = luot           
+        }
+        function clickButton12_11(){
+        document.getElementById('id_12_11').innerText = luot           
+        }
+        function clickButton12_12(){
+        document.getElementById('id_12_12').innerText = luot           
+        }
+//----------------------------------------------------------------
+
+    </script>
+</body>
+</html>

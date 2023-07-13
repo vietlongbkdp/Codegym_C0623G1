@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm phần tử</title>
+</head>
+<body>
+    <h1>Sample Screen</h1>
+    <label for="inputData">Nhập tên : </label><input type="text" name="inputData" id="id_inputData" width="200px">
+    <button type="button" id="btnAdd" onclick="addItem()">Thêm tên</button>
+    <button type="button" id="btnShow" onclick="showAllItem()">Hiển thị tất cả</button>
+    <button type="reset" id="btnClear" onclick="clearSreen()">Nhập lại</button>
+
+    <ul id="result">
+
+    </ul>
+
+
+    <script>
+        var A = [];
+        var i = -1;
+        
+        function addItem(){
+            // document.getElementById("result").innerHTML = '';
+
+            if(document.getElementById('id_inputData').value == ''){
+            } else{
+                i++;
+                A[i] = document.getElementById('id_inputData').value;
+            }
+
+            console.log(A[i]);
+            document.getElementById("id_inputData").value = '';
+            // console.log(A.length);
+        }
+
+        function showAllItem(){
+            document.getElementById("result").innerHTML = '';
+            for(let j = 0; j < A.length; j++){
+            document.getElementById("result").innerHTML += "<li>" + A[j] + "</li>";
+                // console.log(A[j]);
+            }
+        }
+
+        function clearSreen(){
+        document.getElementById("result").innerHTML = '';
+
+            A =[];
+            i = -1;
+        }
+
+
+    </script>
+</body>
+</html>

@@ -9,12 +9,12 @@
     <h1>Số nguyên tố</h1>
     <label for="snt">Nhập số lượng số nguyên tố cần hiển thị:  </label> <input type="number" name="input_n" id="inputN" style="width: 50px;">
     <button type="button" id="btnResult" onclick="resultSNT()">Kết quả</button>
-    <ul id="showResult">
+    <!-- <ul id="showResult">
 
-    </ul>
+    </ul> -->
 
 
-    <script>
+    <!-- <script>
         function sNT(a){
             var a;
             var cout = 0;
@@ -65,16 +65,36 @@
             var dem = 0;
             var numTemp = 2;
             while(dem <= inpSNT){
-                for(i = 2; i < numTemp; i++)
+                for(let i = 2; i < numTemp; i++)
                 {
                     if(sNT(i)){
                         console.log(i);
                         dem++;
-                        break;
                     }
-                }
-            }   numTemp +=1;
+                } break;
+                numTemp ++;
+            }  
         }
+    </script> -->
+    <script>
+        function resultSNT(){
+        var a = document.getElementById('inputN').value;
+      let count = 0;
+      let num = 2;
+      while (count < a) {
+        let flag = true;
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            flag = false;
+            break;
+          }
+        }
+        if (flag == true) {
+          console.log(num + " là số nguyên tố");
+          count++;
+        }
+        num++;
+      }}
     </script>
 </body>
 </html>
