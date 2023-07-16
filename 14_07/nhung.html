@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [
+        [2, 1, 0, 3],
+        [4, 4, 3, 6],
+        [1, 1, 6, 1],
+        [3, 9, 2, 3]]
+    
+        function duaCacSoChiaHetChoBaVeDau(arrIn){
+            for(let i = 0; i< arrIn.length; i++){
+                var temp = 0;
+                count = 0;
+               for(let j = 0; j < arrIn[i].length; j++){
+                   if((arrIn[i][j] % 3) == 0) {
+                    // console.log(arrIn[i][j]);
+                        temp = arrIn[i][j];
+                        arrIn[i][j] = arrIn[i][arrIn[i].length - 1- count]
+                        arrIn[i][arrIn[i].length -1- count] = temp;
+                        count++;
+                   }
+                }
+                console.log(temp);
+            }
+            return arrIn;
+        }
+console.log(duaCacSoChiaHetChoBaVeDau(arr));
+
+
+    </script>
+</body>
+</html>

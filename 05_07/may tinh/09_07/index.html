@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đá bóng</title>
+</head>
+<body>
+    <img id="myImage" style="width: 200px; position: relative; left : 0px;" src="https://thuviendohoa.vn/upload/images/items/hinh-anh-trai-bong-da-png-452.jpg" alt="Ảnh quả bóng">
+    <p style="font-size: 20px;" >Click button below to move the image</p>
+    <button type="button" name="btnLeft" id="btn_Left" style="margin: 30px;" onclick="moveLeft()">Move Left</button>
+    <button type="button" name="btnRight" id="btn_Right" style="margin: 30px;" onclick="moveRight()">Move Right</button>
+
+
+
+    <script>
+        var a = document.getElementById("myImage");
+        function moveLeft(){
+            a.style.left = parseInt(a.style.left) + 20 +'px';
+        }
+        function moveRight(){
+            a.style.left = parseInt(a.style.left) - 20 +'px';
+        }
+    </script>
+</body>
+</html>
