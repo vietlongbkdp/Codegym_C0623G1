@@ -430,9 +430,78 @@
 // ---------------------------------------------------------------
 
 // Bài 16: Kiểm tra ma trận có tồn tại số lẻ hay không
+
+// var arr = [
+//                 [2, 1, 0, 3],
+//                 [4, 4, 3, 1],
+//                 [1, 1, 6, 1],
+//                 [8, 6, 2, 0]]
+            
+//                 function kiemTraSoLe(arrIn){
+//                     for(let i = 0; i< arrIn.length ; i++){
+//                        for(let j = 0; j < arrIn[i].length -1; j++){
+//                             if((arrIn[i][j] % 2) == 1)
+//                             {
+//                                 return console.log("Mảng có tồn tại số lẻ")
+//                             }
+
+//                         }
+//                     }
+//                     return console.log("Mảng không tồn tại số lẻ")
+//                 }
+//  kiemTraSoLe(arr)
+
+// -------------------------------------------------------------
+
+// let a = [
+//     [5,3,2,1],
+//     [4,1,2,2],
+//     [1,1,1,1],
+//     [3,1,3,5]
+// ]
+// function hang_1(arr){
+//     for (let i=0; i<arr.length; i++){
+//        var flag = 0
+//         for (let j=0; j<arr[i].length - 1 ; j++){
+//             if (arr[i][j] >= arr[i][j+1] ){s
+//                 flag == 1;
+//                 }
+//                 else { 
+//                     flag == 0;
+//                 break;}
+//             } 
+//      if(flag == 1){console.log(arr[i]) }
+//     }
+
+//     }
+//     hang_1(a);
 // ---------------------------------------------------------------
 
 // Bài 17: Liệt kê các dòng giảm dần trong ma trận
+
+// var arr = [
+//             [2, 1, 0, 3],
+//             [4, 4, 3, 1],
+//             [1, 1, 6, 1],
+//             [8, 6, 2, 0]]
+        
+//             function dongGiamDan(arrIn){
+//                 for(let i = 0; i< arrIn.length ; i++){
+//                     var flag = true;
+//                    for(let j = 0; j < arrIn[i].length -1; j++){
+//                        if(arrIn[i][j+1] > arrIn[i][j]) {
+//                         flag = false;
+//                         break;
+//                        }
+//                     }
+//                     if(flag == true){
+//                         console.log(arrIn[i])
+//                     }
+//                 }
+//             }
+//         dongGiamDan(arr);
+
+
 // ---------------------------------------------------------------
 
 // Bài 18: Tìm số chẵn đầu tiên trong ma trận
@@ -442,3 +511,31 @@
 // ---------------------------------------------------------------
 
 // Bài 20: Liệt kê các dòng có tổng lớn nhất
+
+// var arr = [
+//             [9, 1, 9, 9],
+//             [4, 4, 3, 1],
+//             [1, 1, 6, 1],
+//             [8, 6, 2, 0]]
+        
+//             function printSumMax(arrIn){
+//                 var arrSum = new Array(arr.length)
+//                 for(let i = 0; i< arrIn.length ; i++){
+//                     var sum = 0;
+//                    for(let j = 0; j < arrIn[i].length; j++){
+//                        sum += arrIn[i][j];
+//                    }
+//                    arrSum[i] = sum;
+//                 }
+//             var maxSum = 0;
+//             for(var k = 0; k < arrSum.length; k++)
+//             {
+//                 if(arrSum[k] > maxSum)
+//                 {
+//                     maxSum = arrSum[k];
+//                     return arrIn[k];
+//                 }
+//             }
+
+//             }
+//         console.log(printSumMax(arr));

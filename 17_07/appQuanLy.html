@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng quản lý sản phẩm</title>
+    <style>
+        body {
+
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        #main_area {
+            text-align: center;
+            width: 430px;
+            height: auto;
+            border-radius: 10px;
+            background-color: blanchedalmond;
+        }
+
+        .addItem {
+            background-color: lightgray;
+            width: 400px;
+            height: 80px;
+            border-radius: 10px;
+            text-align: center;
+            vertical-align: center;
+            position: relative;
+            margin-left: 10px;
+        }
+
+        .title_main {
+            font-size: 25px;
+            padding-top: 10px;
+
+        }
+
+        #inputPro {
+            text-align: left;
+            justify-content: center;
+            width: 250px;
+            height: 30px;
+            border-color: gray;
+            border-radius: 5px;
+            border: 2px;
+            padding-left: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            margin-right: 10px;
+            margin-top: 20px;
+
+
+
+        }
+
+        #btnAdd {
+            background-color: rgba(28, 170, 28, 1);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        #btnAdd:hover {
+            background-color: rgba(28, 170, 28, 0.5);
+        }
+
+        #label_prName {
+
+            font-weight: bold;
+        }
+
+        .title_table {
+            display: flex;
+            flex-direction: row;
+            width: 430px;
+            /* height: auto; */
+            /* background-color: aquamarine; */
+            justify-content: space-between;
+        }
+
+        #label_prName {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        #label_Qty {
+            font-size: 20px;
+            margin-right: 10px;
+
+        }
+        .name_Item{
+            width: 160px;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        #btn_Edit {
+            background-color: rgba(28, 170, 28, 1);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #btn_Edit:hover {
+            background-color: rgba(28, 170, 28, 0.5);
+        }
+
+        #btn_Delete {
+            background-color: rgba(28, 170, 28, 1);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #btn_Delete:hover {
+            background-color: rgba(28, 170, 28, 0.5);
+        }
+
+        #btnEdit {
+            width: 120px;
+            text-align: center;
+        }
+
+        #btnDelete {
+            width: 120px;
+            text-align: center;
+        }
+
+        #id_hang {
+            width: auto;
+        }
+        #inputEditText{
+            width: 100px;
+            height: 25px;
+            border: 0.5;
+            border-radius: 3px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main_area">
+        <h1 class="title_main">Add New Product</h1>
+        <div class="addItem">
+            <input type="text" name="inputNewProduct" placeholder="New Product" id="inputPro" onchange="addNewItem()">
+            <button id="btnAdd" onclick="addNewItem()">Add</button>
+        </div>
+        <h1 class="title_main">Display All Product</h1>
+        <div class="title_table">
+            <p id="label_prName">Product Name</p>
+            <p id="label_Qty"></p>
+        </div>
+        <table id="table_item">
+            
+            
+        </table>
+
+    </div>
+
+
+    <script>
+        var data = [];
+        function addNewItem() {
+            var strItem = document.getElementById('inputPro').value;
+            if (checkExisting(data, strItem)) {
+                alert("Sản phẩm này đã tồn tại, vui lòng nhập lại.");
+            }
+            else {
+                if (strItem != '') {
+                    data.push(strItem);
+                    // console.log(data);
+                    getValueForTable();
+                    document.getElementById('inputPro').value = '';
+                }
+            }
+        }
+        function getValueForTable() {
+            let strInTable = '';
+            for (let i = 0; i < data.length; i++) {
+                strInTable += `<tr>
+                                <td class="name_Item" id="nameProductIn${i}">${data[i]}</td>
+                                <td id="btnEdit" onclick="edit_1(${i})">
+                                <button id="btn_Edit">Edit</button>
+                                </td>
+                                <td id="btnDelete" onclick="delete_1(${i})">
+                                <button id="btn_Delete">Delete</button>
+                                </td>
+                            </tr>`
+
+
+            }
+            document.getElementById('table_item').innerHTML = strInTable;
+            var count = data.length;
+            document.getElementById('label_Qty').innerText = `Quanlity: ${count}`;
+        }
+
+        function delete_1(number) {
+            var tempData = [];
+            for (i = 0; i < data.length; i++) {
+                if (i != number) {
+                    tempData.push(data[i]);
+                }
+
+            }
+            data = tempData;
+            console.log(data);
+
+            getValueForTable();
+
+        }
+        function checkExisting(arrIn, value) {
+            let index = arrIn.indexOf(value);
+            if (index != -1) {
+                return true
+            } else return false;
+        }
+        function edit_1(number) {
+            document.getElementById(`nameProductIn${number}`).innerHTML =
+             `<input type="text" placeholder="Nhập sản phẩm mới" id="inputEditText" onchange="saveNewData(${number})">`
+            // let strEdit = prompt("Nhập tên sản phẩm mới: ");
+            // data[number] = strEdit;
+            // getValueForTable();
+        }
+        function saveNewData(number){
+            let strEdit = document.getElementById("inputEditText").value;
+            data[number] = strEdit;
+            getValueForTable();
+        }
+    </script>
+</body>
+
+</html>
