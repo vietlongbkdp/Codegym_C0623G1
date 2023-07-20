@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng quản lý sản phẩm</title>
+    <style>
+        body{
+
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        #main_area{
+            text-align: center;
+            background-color: blanchedalmond;
+            width: 430px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .addItem{
+            background-color: lightgray;
+            width: 400px;
+            height: 80px;
+            border-radius: 10px;
+            text-align: center;
+            vertical-align: center;
+            position: relative;
+            margin-left: 10px;
+        }
+        .title_main{
+            font-size: 25px;
+            padding-top: 10px;
+
+        }
+        #inputPro{
+            text-align: left;
+            justify-content: center;
+            width: 250px;
+            height: 30px;
+            border-color: gray;
+            border-radius: 5px;
+            border: 2px;
+            padding-left: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            margin-right: 10px;
+            margin-top: 20px;
+
+
+
+        }
+        #btnAdd{
+            background-color: rgba(28, 170, 28, 1);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            
+        }
+        #btnAdd:hover{
+            background-color: rgba(28, 170, 28, 0.5);
+        }
+        #label_prName{
+
+            font-weight: bold;
+        }
+        .title_table{
+            display: flex;
+            flex-direction: row;
+            width: 430px;
+            /* background-color: aquamarine; */
+            justify-content: space-between;
+        }
+        #label_prName{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        #label_Qty{
+            font-size: 20px;
+            margin-right: 10px;
+
+        }
+        #btn_Edit{
+            background-color: rgba(28, 170, 28, 1);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #btn_Edit:hover{
+            background-color: rgba(28, 170, 28, 0.5);
+        }
+        #btn_Delete{
+            background-color: rgba(28, 170, 28, 1);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #btn_Delete:hover{
+            background-color: rgba(28, 170, 28, 0.5);
+        }
+        #btnEdit{
+            width: 120px;
+            text-align: center;
+        }
+        #btnDelete{
+            width: 120px;
+            text-align: center;
+        }
+        #name_Item{
+            width: 160px;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        #id_hang{
+            width: auto;
+        }
+    </style>
+</head>
+<body> 
+    <div id="main_area">
+        <h1 class="title_main">Add New Product</h1>
+        <div class="addItem">
+            <input type="text" name="inputNewProduct" placeholder="New Product" id="inputPro">
+            <button id="btnAdd" onclick="addNewItem()">Add</button>
+        </div>  
+        <h1 class="title_main">Display All Product</h1>
+        <div class="title_table">
+            <p id="label_prName">Product Name</p>
+            <p id="label_Qty"></p>
+        </div>
+        <table id="table_item">
+
+        </table>
+
+    </div>
+    
+
+    <script>
+            var strOut ='';
+            var count = 0;
+            var arr = [];
+        function addNewItem(){
+            var strItem = document.getElementById('inputPro').value;
+            strOut += '<tr id="id_hang" ><td id="name_Item">'+ `${strItem}` +'</td><td id="btnEdit"><button id="btn_Edit" onclick="edit_1()">Edit</button></td><td id="btnDelete"><button id="btn_Delete" onclick="delete_1()">Delete</button></td></tr>'
+            document.getElementById('table_item').innerHTML  = strOut;
+            count++;
+            document.getElementById('label_Qty').innerText = count + ' Product';
+            document.getElementById('inputPro').value = '';
+            arr.push('<tr id="id_hang" ><td id="name_Item">'+ `${strItem}` +'</td><td id="btnEdit"><button id="btn_Edit" onclick="edit_1(' + `${count}` + ')">Edit</button></td><td id="btnDelete"><button id="btn_Delete" onclick="delete_1(' + `${count}` + ')">Delete</button></td></tr>')
+            console.log(arr);
+        }
+        function delete_1(number) {
+            if(count == 0){
+
+            }else{
+            strOut = '';
+            arr.splice((number-1), 1);
+            for(let i = 0; i < arr.length; i++){
+                strOut += arr[i];
+            }
+            count--;
+            console.log(arr);
+            document.getElementById('table_item').innerHTML  = strOut;
+            document.getElementById('label_Qty').innerText = count + ' Product';
+        }   }
+        function edit_1(params) {
+            
+        }
+    </script>
+</body>
+</html>

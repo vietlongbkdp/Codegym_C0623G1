@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Nhận đầu vào video
+const video = document.querySelector('video');
+
+// Tạo một đối tượng chuyển động
+const motionDetector = new cv.MotionDetector();
+
+// Thiết lập các tham số cho máy phát hiện chuyển động
+motionDetector.setThreshold(100);
+motionDetector.setArea(1000);
+
+// Khởi động vòng lặp phát video
+video.addEventListener('play', () => {
+// Lấy khung hiện tại từ video
+const frame = video.captureFrame();
+
+// Phát hiện chuyển động trong khung
+const motion = motionDetector.detect(frame);
+
+// Nếu có chuyển động, hãy vẽ hình chữ nhật xung quanh đối tượng chuyển động
+if (motion.length > 0) {
+// Vẽ hình chữ nhật xung quanh đối tượng chuyển động
+cv.drawRectangle(frame, motion[0].boundingBox, {
+color: 'red',
+thickness: 2,
+});
+}
+
+// Xuất khung hiện tại sang video mới
+video.renderFrame(frame);
+});
+    </script>
+</body>
+</html>
