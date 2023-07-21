@@ -1,0 +1,151 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.main_web{
+    display: flex;
+    /* background-image: url("microsoftteams-image-30.png"); */
+    flex-direction: column;
+    align-items: center;
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: auto;
+    margin-top: 5px;
+    /* background-color: bisque; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#logo_link_Home{
+    position: absolute;
+    text-align: left;
+
+}
+#logo_CB{
+    width: 200px;
+    height: auto;
+}
+.input_search{
+    position: absolute;
+    width: 300px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    padding-top: 25px;
+    
+
+    /* background-color: aquamarine; */
+}
+#iconphone_header{
+    width: 60px;
+    margin-left: 10px;
+}
+.contact_VN{
+    /* background-color: aqua; */
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+.contact_number{
+    color: rgb(2, 53, 2);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+#contact{
+    position: absolute;
+   /* background-color: cadetblue; */
+    right: 10px;
+    margin-top: 20px;
+}
+#input_text{
+    border: 1 ;
+    border-color: green;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    height: 30px;
+    width: 30%;
+}
+#btnSearch{
+    height: 35px;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(0, 128, 0, 1);
+    border-radius: 5px;
+    border: none;
+}
+#btnSearch:hover{
+    background-color: rgba(0, 128, 0, 0.6);
+    cursor: pointer;
+}
+.navigation{
+    width: 95%;
+    height: 60px;
+    background-color: rgba(1, 92, 1, 0.815);
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+
+
+}
+.nav_item{
+    color: aliceblue;
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    width: 20%;
+
+
+}
+.nav_item:hover{
+    color: rgb(237, 238, 237);
+    background-color: rgba(1, 92, 1, 1);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.main_body{
+    width: 95%;
+    background-image: url('https://www.brewer-world.com/wp-content/uploads/2022/04/Carlsberg-NY-Dawn-2.png');
+    background-position:center;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.task_bar{
+    margin-top: 10px;
+    width: 270px;
+    height: auto;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+.beer_type{
+    color: aliceblue;
+    font-size: 23px;
+    font-weight: bold;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 100px;
+    padding: 5px;
+
+}
+.beer_type:hover{
+    background-color: rgba(1, 92, 1, 1);
+    cursor: pointer;
+    border-radius: 10px;
+}
