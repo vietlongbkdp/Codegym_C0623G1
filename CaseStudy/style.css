@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+.head_class{
+    width: 90%;
+    background-color: blanchedalmond;
+    height: auto;
+    margin-top : 10px;
+}
+.imgLogo{
+    width: 200px;
+    position: absolute;
+    left: 50px;
+
+}

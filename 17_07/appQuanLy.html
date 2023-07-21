@@ -229,15 +229,22 @@
             } else return false;
         }
         function edit_1(number) {
+
             document.getElementById(`nameProductIn${number}`).innerHTML =
-             `<input type="text" placeholder="Nhập sản phẩm mới" id="inputEditText" onchange="saveNewData(${number})">`
+             `<input type="text" placeholder="Nhập sản phẩm mới" id="inputEditText" onblur="saveNewData(${number})">`
             // let strEdit = prompt("Nhập tên sản phẩm mới: ");
             // data[number] = strEdit;
             // getValueForTable();
+            document.getElementById('inputEditText').focus();
+            // document.getElementById('inputEditText').value = data[number];
+     
+        
         }
         function saveNewData(number){
             let strEdit = document.getElementById("inputEditText").value;
-            data[number] = strEdit;
+            if(strEdit == ''){
+            }else
+            {data[number] = strEdit;}
             getValueForTable();
         }
     </script>
