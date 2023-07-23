@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Siêu cấp Vip Pro của Long</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header_imfo_bar">
+                    <div class="header_imfo_call">
+                        <div class="header_imfo_bar_mail">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">vietlongbkdp@gmail.com</a>
+
+                        </div>
+                        <div class="header_imfo_bar_phone">
+                            <i  class="fa-solid fa-phone"></i>
+                            <a href="https://www.facebook.com/">0913331916</a>
+                        </div>
+                    </div>
+                    <div class="header_imfo_bar_contact">
+                        <a href="https://www.facebook.com/vietlongbk.mechatronics"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://shopee.vn/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+            </div>
+            <div class="navigation">
+                <div class="navigation_logo">
+                    <a href="https://shopee.vn/" target="_self">
+                        <img src="https://logos-world.net/wp-content/uploads/2020/11/Carlsberg-Logo.png" alt="Logo Carlsberg">
+                    </a>
+                </div>
+                <div class="navigation_main">
+                    <a href="/home.html" class="navigation_main_item">Home</a>
+                    <a href="/product.html" class="navigation_main_item">Product</a>
+                    <a href="/contact.html" class="navigation_main_item">Contact</a>
+                    <a href="/about.html" class="navigation_main_item">About</a>
+                    <a href="/login.html" class="navigation_main_item">Login</a>
+                </div>
+                <div class="navigation_search">
+                    <input type="text" id="navigation_input" placeholder="Searching Product...">
+                    <button class="btn_search" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>Serach</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------- -->
+            <div class="form_data">
+                <div class="form_input">
+                    <div class="form_input_datainput">
+                        <label>ID</label><input type="text" id="form_input_id">
+                    </div>
+
+                    <div class="form_input_datainput">
+                        <label>Tên Sản Phẩm</label><input type="text" id="form_input_product_name">
+                    </div>
+
+                    <div class="form_input_datainput">
+                        <label>Loại bia</label><input type="text" id="form_input_typeof">
+                    </div>
+
+                    <div class="form_input_datainput">
+                        <label>Nồng độ cồn</label><input type="number" id="form_input_id_alcohol">
+                    </div>
+
+                    <div class="form_input_datainput">
+                        <label>Giá</label><input type="number" id="form_input_id_prices">
+                    </div>
+
+                    <div class="form_input_datainput">
+                        <label>Số lượng</label><input type="number" id="form_input_id_qty">
+                    </div>
+
+                    <div class="form_input_datainput">
+                        <label>Hình ảnh</label><input type="text" id="form_input_id_image">
+                        
+                    </div>
+
+                    <div class="form_input_button">
+                        <button onclick="renderData()">Add</button>
+                        <button>Edit</button>
+                        <button>Clear</button>
+                    </div>
+                </div>
+
+
+                <div class="form_show_data">
+                    <table border="1" style="background-color: rgb(255, 255, 255); border-collapse: collapse;">
+                        <thead >
+                            <tr>
+                                <td>ID</td>
+                                <td>NAME</td>
+                                <td>TYPE OF</td>
+                                <td>ALCOHOL</td>
+                                <td>PRICES</td>
+                                <td>QUANTITY</td>
+                                <td>IMAGE</td>
+                                <td>ACTIVITY</td>
+                            </tr>
+                        </thead>
+                        
+                        <tbody id="tbody_product_render">
+                        
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <div class="footer">
+            <div><p>Copyright © 2022 DigiMedia Co., Ltd. All Rights Reserved.</p></div>
+            <div><p>Design: <a href="https://www.facebook.com/vietlongbk.mechatronics/">Nguyễn Viết Long</a></p></div>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
+
+
