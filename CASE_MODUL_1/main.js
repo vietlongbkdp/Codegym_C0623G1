@@ -125,6 +125,7 @@ var hudaGold = new ProductBeer(9, 'Huda Gold', 'Bia phổ thông', 4.7, 50, 1800
 var halida = new ProductBeer(10, 'Halida', 'Bia phổ thông', 4.5, 50, 14000, '/image/halida-bottle.png') 
 
 var listProduct = JSON.parse(localStorage.getItem("listProduct")) || [blanc, carlsberg, tuborgGold, tuborgIce, somersbyApple, somersbyBlackBerry, huda, hudaIceBlast, hudaGold, halida]
+var TempCart=JSON.parse(localStorage.getItem("TempCart")) || [];
  
 
 function renderData(){
@@ -149,16 +150,23 @@ function renderData(){
 }
 
 function deletetItem(index){
-    listProduct.splice(index, index+1);
+    listProduct.splice(index, 1);
     localStorage.removeItem("listProduct");
     localStorage.setItem("listProduct", JSON.stringify(listProduct));
     renderData();
 }
 
-// editItem(){
+function editItem(index){
+    document.getElementById('form_input_id').value = listProduct[index].idBeer;
+    document.getElementById('form_input_product_name').value = listProduct[index].nameBeer;
+    document.getElementById('form_input_typeof').value = listProduct[index].typeBeer;
+    document.getElementById('form_input_id_alcohol').value = listProduct[index].alcohol;
+    document.getElementById('form_input_id_prices').value = listProduct[index].prices;
+    document.getElementById('form_input_id_qty').value = listProduct[index].qty;
+    document.getElementById('form_input_id_image').value = listProduct[index].image;
+    deletetItem(index);
 
-// }
-// renderData();
+}
 
 function addData(){
     var strID = document.getElementById('form_input_id').value;
@@ -168,15 +176,7 @@ function addData(){
     var strPrices = document.getElementById('form_input_id_prices').value;
     var strQty = document.getElementById('form_input_id_qty').value;
     var strImage = document.getElementById('form_input_id_image').value;
-    var count = +listProduct[listProduct.length-1].idBeer;
-        // console.log(strID);
-        // console.log(strNamProduct);
-        // console.log(strType);
-        // console.log(strAlcohol);
-        // console.log(strPrices);
-        // console.log(strQty);
-        // console.log(strImage);
-        // console.log(count);
+
         if((strID =='')||(strNamProduct =='')||(strType =='')||(strAlcohol =='')||(strQty =='')||(strPrices =='')||(strImage =='')){
             alert("Bạn đã nhập thiếu thông tin")
         }
@@ -199,7 +199,9 @@ function clearDataForm(){
     document.getElementById('form_input_id_qty').value = '';
     document.getElementById('form_input_id_image').value = '';
 }
-
+function editData(){
+    addData();
+}
 
 //product------------------------------------------------
 
@@ -214,11 +216,77 @@ function renderProduct(){
                             <p class="products_prices" id="pro_prices">Giá: ${listProduct[i].qty} ₫</p>
                             
                         </a>
-                        <button id="add_cart">Add to Cart</button>
+                        <button id="add_cart" onclick='addProductToCart(${i})'>Add to Cart</button>
                     </div>`;
         strProductRender_2 += strIn_2;
     }
     document.getElementById('product_show').innerHTML = strProductRender_2;
 }
 
+function showCart_bar(){
+    document.getElementById('showCart').style.display = "flex";
+}
+function closeCart_bar(){
+    document.getElementById('showCart').style.display = "none";
+
+}
+function btnOrder(){
+    var checkOder = TempCart.length
+    if(checkOder == 0){
+        alert("Bạn chưa chọn sản phẩm nào!!")
+    }
+    else{
+    alert('Cảm ơn bạn đã đặt hàng');
+    document.getElementById('showCart').style.display = "none";
+    localStorage.removeItem('TempCart');
+    TempCart = []
+    var strCart ='';
+    indexCart = 0;
+    document.getElementById('mainCart').innerHTML = strCart;
+    document.getElementById('qty_cart').innerText = indexCart;
+}
+}
+function addProductToCart(index){
+    var strCart =''
+    let count = 0;
+    for(let i=0; i<listProduct.length; i++){
+        if(listProduct[index] == TempCart[i]){
+            count++;
+            break;
+        }
+    }
+     if(count != 0){
+        alert('Sản phẩm này đã có trong giỏ hàng của bạn');
+     }
+     else{
+    TempCart.push(listProduct[index]);
+    renderCart();
+    localStorage.setItem("TempCart", JSON.stringify(TempCart))
+    }
+}
 renderProduct();
+function renderCart() {
+    console.log(TempCart);
+    var strCart =''
+    var indexCart = TempCart.length;
+    document.getElementById('qty_cart').innerText = indexCart;
+    for(let i=0; i<TempCart.length; i++){
+        strCart += `<div class="productCart">
+        <img src="${TempCart[i].image}" alt="${TempCart[i].nameBeer}">
+        <a href="https://douongnhapkhau.com/products/bia-1664-kronenbourg-blanc-5-phap-24-chai-330ml/" target="_blank">${TempCart[i].nameBeer}</a>
+        <input type="number" id="numberProductCart" value= '1'>
+        <p id="btnClearProductCart" onclick='btnClearProductCart_1(${i})'><i class="fa-solid fa-trash-can"></i></p>
+    </div>`
+    }
+    document.getElementById('mainCart').innerHTML = strCart;
+}
+function btnClearProductCart_1(index){
+    TempCart.splice(index, 1);
+    localStorage.removeItem("TempCart");
+    localStorage.setItem("TempCart", JSON.stringify(TempCart));
+    renderCart();
+}
+renderCart()
+
+
+

@@ -38,16 +38,16 @@
                     </a>
                 </div>
                 <div class="navigation_main">
-                    <a href="/home.html" class="navigation_main_item" onclick="renderProduct()">Home</a>
+                    <a href="/home.html" class="navigation_main_item">Home</a>
                     <a href="/product.html" class="navigation_main_item">Product</a>
                     <a href="/contact.html" class="navigation_main_item">Contact</a>
                     <a href="/about.html" class="navigation_main_item">About</a>
                     <a href="/login.html" class="navigation_main_item">Login</a>
                 </div>
                 <div class="navigation_search">
-                    <button id="nav_cart">
+                    <button id="nav_cart" onclick="showCart_bar()" >
                         <i class="fa-solid fa-cart-plus"></i>
-                        <p id="qty_cart">1</p>
+                        <p id="qty_cart"></p>
                     </button>
                     <input type="text" id="navigation_input" placeholder="Searching Product...">
                     <button class="btn_search" type="submit">
@@ -59,8 +59,13 @@
         </div>
 
         <!-- ------------------------------------------------------------------------------------------- -->
-        <div class="main_body">
-            
+        <div class="product_main_body">
+            <div class="produc_main_body_nav">
+                <a href="" id="produc_nav_caocap">Bia cao cấp</a>
+                <a href="" id="produc_nav_phothong">Bia phổ thông</a>
+                <a href="" id="produc_nav_dacbiet">Bia đặc biệt</a>
+            </div>
+            <div id="product_show"></div>
         </div>
 
 
@@ -71,6 +76,27 @@
         </div>
     </div>
 
+        <div id="showCart" onmouseleave="closeCart_bar()">
+            <div class="tilleCart">
+                <p>Giỏ hàng</p>
+            </div>
+            <div id="mainCart">
+
+            </div>
+            <div class="footerCart">
+                <div class="qtyTotal">
+                    <label>Số lượng:</label><p id="qtyTotalShow">123</p>
+                </div>
+                <div class="pricesTotal">
+                    <label>Thành tiền</label><p style="color: red;" id="pricesTotalShow">12355454 đồng</p>
+                    <button id="btnOrder" onclick="btnOrder()">Oder</button>
+                </div>
+            </div>
+        </div>
+
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
