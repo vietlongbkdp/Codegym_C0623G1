@@ -1,0 +1,438 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    height: 160px;
+
+}
+.header_imfo_bar{
+    height: 40px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right: 20px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+.header_imfo_call{
+    display: flex;
+    padding-left: 10%;
+    width: 500px;
+    justify-content: space-between;
+
+}
+.header_imfo_bar_mail{
+    display: flex;
+    color: #afafaf;
+    font-size: 20px;
+    align-items: center;
+}
+.header_imfo_bar_mail a{
+    color: #afafaf;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 10px;
+}
+.header_imfo_bar_phone{
+    display: flex;
+    color: #afafaf;
+    font-size: 20px;
+    align-items: center;
+    margin-left: 30px;
+}
+.header_imfo_bar_phone a{
+    color: #afafaf;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 3%;
+}
+.header_imfo_bar_contact{
+    display: flex;
+    padding-right: 10%;
+}
+.header_imfo_bar_contact a{
+    padding: 10px;
+    color: #afafaf;
+    font-size: 30px;
+}
+.navigation{
+    height: 90px;
+    display: flex;
+background-color: rgb(216, 226, 216);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation_logo img{
+    width: 170px;
+    height: auto;
+
+}
+.navigation_main{
+    display: flex;
+    justify-content: space-around;
+}
+.navigation_main a{
+    color: #505050;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 75px;
+}
+.navigation_main a:hover{
+    color: green;
+    cursor: pointer;
+}
+.navigation_search button{
+    color: #505050;;
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-color: green;
+    border-radius: 30px;
+    border-width: 2px;
+    display: block;
+}
+.navigation_search button:hover{
+    background-color: rgb(55, 141, 55);
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.navigation_search{
+    /* margin-right: 100px; */
+    display: flex;
+}
+.navigation_search input{
+    width: 220px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+#nav_cart{
+    margin-right: 10px;
+    font-size: 25px;
+    display: flex;
+}
+#nav_cart p{
+    font-size: 20px;
+    color: #f32323;
+    margin-left: 5px;
+}
+.footer{
+    height: 120px;
+    background-color: rgb(216, 226, 216);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer a{
+    color: #505050;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.footer p{
+    color: #505050;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.footer div{
+    padding-top: 10px;
+}
+.login_main_body{
+    background-image: url(/image/wallpaperflare.com_wallpaper\ \(3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form{
+    background-color: #659758;
+    height: 150px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-bottom: 400px;
+    border: 1;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 3px;
+
+}
+.login_form_input{
+    display: flex;
+    margin: 8px;
+    color: rgb(0, 22, 0);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-right: 35px;
+}
+.login_form_input input{
+    color: rgb(0, 22, 0);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    min-width: 200px;
+    margin-left: 30px;
+}
+.login_form_button{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+.login_form_button button{
+    color: rgb(0, 22, 0);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    border: 1;
+    border-radius: 5px;
+}
+.login_form_button button:hover{
+    background-color: #3c5c34;
+    color: #ffffff;
+    border: none;
+}
+.product_main_body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/image/wallpaperflare.com_wallpaper\ \(9\).jpg);
+    background-repeat: repeat-y;
+}
+.produc_main_body_nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-size: cover;
+    justify-content: center;
+
+}
+.produc_main_body_nav a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(161, 194, 170, 0.507); 
+    justify-content: center;
+    text-align: center;
+
+}
+.produc_main_body_nav a:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#product_show{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-around;
+}
+.product_detail_item{
+    background-color: white;
+    width: 270px;
+    height: 370px;
+    border: 1;
+    border-radius: 30px;
+    border-color: green;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 42px ;
+
+}
+.product_detail_item:hover{
+    transform: scale(1.1);
+}
+.product_detail_item a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#add_cart{
+    padding: 5px;
+    background-color: #192c94;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+#add_cart:hover{
+    background-color: #3d4b9b;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.products_name{
+
+    color: #414040;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.products_prices{
+    color: #f32323;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.product_detail_item img{
+    max-width: 260px;
+    max-height: 250px;
+    border-radius: 30px;
+}
+.form_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form_input{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin: 30px;
+    background-color: #d3cdcd;
+    width: 500px;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px;
+
+}
+.form_input_datainput{
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    width: 450px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    color: #1b1b1b;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+.form_input_datainput input{
+    min-width: 300px;
+    margin-left: 30px;
+
+
+}
+.form_input_button{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    margin-top: 10px;
+}
+.form_input_button button{
+    padding: 5px;
+    min-width: 60px;
+    border-radius: 5px;
+    background: #6b9261;
+    color: #efefef;
+    font-weight: bold;
+}
+.form_input_button button:hover{
+    background-color: #3c5c34;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.form_show_data thead td{
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #8b8a8a;
+    border: 1;
+    border-color: #1b1b1b;
+}
+.form_show_data tbody td{
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1;
+    border-color: #1b1b1b;
+}
+#form_show_data_btnEdit{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    background-color:  #6b9261;
+    border: none;
+    border-radius: 5px;
+    min-width: 50px;
+    margin: 5px;
+
+}
+#form_show_data_btnEdit:hover{
+    background-color: #3c5c34;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#form_show_data_btnDelete{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    background-color:  #6b9261;
+    border: none;
+    border-radius: 5px;
+    min-width: 50px;
+    margin: 5px;
+}
+#form_show_data_btnDelete:hover{
+    background-color: #3c5c34;
+    cursor: pointer;
+    transform: scale(1.1);
+}
